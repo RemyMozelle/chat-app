@@ -29,9 +29,9 @@ export default class SendMessages extends Component {
         <input
           type="text"
           onChange={this.handleChange}
-          className="input-message"
+          className="input-message input-color"
         />
-        <button>envoyer</button>
+        <button className="input-color">envoyer</button>
       </form>
     );
   }

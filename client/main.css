@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
-
 body {
-  font-family: sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #383c41;
+  background-color: #393c41;
   font-family: "Roboto";
+}
+
+.box-message {
+  background-color: #202225;
 }
 
 h1,
@@ -15,27 +17,53 @@ h3,
 h4,
 h5,
 h6,
-p,
-li {
+p {
   color: aliceblue;
+  margin: 0;
+  padding: 1em;
+  border-bottom: solid 1px #dcddde;
+  line-height: 2em;
 }
 
 strong {
   font-size: 1.2em;
 }
 
-li {
-  font-size: 1.3em;
+.input-color,
+input[type="text" i] {
+  background-color: #393c41;
+  padding: 0;
+  border-bottom: solid 1px #202225;
 }
 
 .message-form {
   display: flex;
-  position: absolute;
+  position: sticky;
   bottom: 0;
   width: 100%;
-  height: 35px;
+  height: 5vh;
 }
 
 .input-message {
   width: 100%;
+}
+
+.block-message {
+  height: "80vh";
+  overflow: "scroll";
+  position: "relative";
+  overflow-x: hidden;
+}
+
+.pseudo {
+  color: #f8f8f8;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 20px 10px;
+}
+
+.date {
+  color: #fff;
+  font-size: 0.7em;
+  padding-left: 20px;
 }

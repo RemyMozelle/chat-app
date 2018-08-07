@@ -12,8 +12,7 @@ class App extends Component {
     return (
       <div>
         <header>
-          <h1 style={{ textAlign: "center" }}>Chat App</h1>
-          <hr />
+          <h2 style={{ textAlign: "center" }}>#général</h2>
         </header>
         <Messages />
         <SendMessages users={this.getPseudo()} />

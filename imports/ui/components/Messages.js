@@ -14,13 +14,16 @@ class Messages extends Component {
     }
 
     return (
-      <div>
+      <div className="block-messages">
         {this.props.messages.map(mess => {
-          //<MessageItem />
           return (
-            <p key={mess._id}>
-              {mess.pseudo} : {mess.text}
-            </p>
+            <div className="box-message">
+              <p key={mess._id} className="pseudo">
+                {mess.pseudo} <em className="date">02/02/2018</em>
+                <br />
+                {mess.text}
+              </p>
+            </div>
           );
         })}
       </div>
