@@ -6,6 +6,11 @@ body {
   box-sizing: border-box;
   background-color: #393c41 !important;
   font-family: "Roboto";
+  overflow: hidden;
+}
+
+.edit-icon {
+  color: red;
 }
 
 .box-message {
@@ -26,7 +31,7 @@ p {
 }
 
 h1 {
-  font-size: 1.4em !important;
+  font-size: 1em !important;
 }
 
 strong {
@@ -48,7 +53,7 @@ strong {
 
 .block-messages {
   overflow-y: scroll;
-  height: 86.6vh;
+  height: 86.8vh;
 }
 
 .fix-border-radius {

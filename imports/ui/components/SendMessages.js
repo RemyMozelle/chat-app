@@ -31,7 +31,6 @@ export default class SendMessages extends Component {
   }
 
   render() {
-    // Meteor.call("users.insert", this.props.users);
     return (
       <form onSubmit={this.handleSubmit} className="input-group ">
         <input
@@ -39,9 +38,10 @@ export default class SendMessages extends Component {
           onChange={this.handleChange}
           className="form-control fix-border-radius"
         />
+
         <div className="input-group-append">
           <button className="input-group-text fix-border-radius">
-            envoyer
+            <i className="far fa-comment" />
           </button>
         </div>
       </form>

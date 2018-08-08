@@ -10,7 +10,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ position: "relative" }}>
         <header>
           <h1 style={{ textAlign: "center" }}>#général</h1>
         </header>
