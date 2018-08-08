@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <header>
-          <h2 style={{ textAlign: "center" }}>#général</h2>
+          <h1 style={{ textAlign: "center" }}>#général</h1>
         </header>
         <Messages />
         <SendMessages users={this.getPseudo()} />

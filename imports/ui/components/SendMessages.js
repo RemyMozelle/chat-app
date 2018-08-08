@@ -5,33 +5,45 @@ export default class SendMessages extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ""
+      message: ""
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(e) {
-    this.setState({ value: e.target.value });
+    this.setState({ message: e.target.value });
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({ value: e.target.value });
-    Meteor.call("messages.insert", this.state.value, this.props.users);
+    Meteor.call("messages.insert", this.state.message, this.props.users);
     e.target.reset();
+    this.goBottom();
+  }
+
+  goBottom() {
+    const block = document.querySelector(".block-messages");
+    if (!block) {
+      return null;
+    }
+    block.scrollTop = block.scrollHeight;
   }
 
   render() {
     // Meteor.call("users.insert", this.props.users);
     return (
-      <form onSubmit={this.handleSubmit} className="message-form">
+      <form onSubmit={this.handleSubmit} className="input-group ">
         <input
           type="text"
           onChange={this.handleChange}
-          className="input-message input-color"
+          className="form-control fix-border-radius"
         />
-        <button className="input-color">envoyer</button>
+        <div className="input-group-append">
+          <button className="input-group-text fix-border-radius">
+            envoyer
+          </button>
+        </div>
       </form>
     );
   }
