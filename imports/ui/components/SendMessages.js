@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Meteor } from "meteor/meteor";
-
-export default class SendMessages extends Component {
+class SendMessages extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -36,7 +35,7 @@ export default class SendMessages extends Component {
         <input
           type="text"
           onChange={this.handleChange}
-          className="form-control fix-border-radius"
+          className="form-control fix-border-radius message-input"
         />
 
         <div className="input-group-append">
@@ -48,3 +47,5 @@ export default class SendMessages extends Component {
     );
   }
 }
+
+export default SendMessages;

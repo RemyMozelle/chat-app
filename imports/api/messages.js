@@ -20,5 +20,15 @@ Meteor.methods({
       pseudo,
       createdAt: new Date()
     });
+  },
+  "messages.update"(idMessage, updateMessage) {
+    check(idMessage, String);
+    check(updateMessage, String);
+
+    messages.update(idMessage, { $set: { text: updateMessage } });
+  },
+  "messages.delete"(id) {
+    check(id, String);
+    messages.remove(id);
   }
 });
