@@ -16,6 +16,7 @@ body {
 .box-message {
   background-color: #202225;
   border-bottom: 1px solid aliceblue;
+  position: relative;
 }
 
 h1,
@@ -61,14 +62,43 @@ strong {
 }
 
 .pseudo {
-  color: #f8f8f8 !important;
+  color: #ffffff !important;
   font-size: 1.2em;
   font-weight: 600;
   margin-bottom: 0;
+  padding-bottom: 0.5em;
+}
+
+.text-pseudo {
+  color: #f8f8f8 !important;
+  padding-top: 0;
 }
 
 .date {
-  color: #fff;
+  color: #626c71;
   font-size: 0.7em;
   padding-left: 20px;
+}
+
+.font-trash {
+  color: #bd0710;
+  position: absolute;
+  top: 1.2em;
+  right: 0.5em;
+  font-size: 1.1em;
+}
+
+.font-edit {
+  color: #00abfc;
+  position: absolute;
+  bottom: 1.2em;
+  right: 0.5em;
+  font-size: 1.1em;
+}
+
+.alert {
+  position: absolute !important;
+  border-radius: 0 !important;
+  width: 100% !important;
+  z-index: 999;
 }

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Messages from "./components/Messages";
 import SendMessages from "./components/SendMessages";
-import Users from "./components/Users";
 
 class App extends Component {
   getPseudo() {
